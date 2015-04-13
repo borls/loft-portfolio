@@ -1,0 +1,6 @@
+TEAM
+Yuzhakov Boris
+
+TECHNOLOGY COLOPHONE
+CSS3, HTML5
+jQuery, Modernizr, Normalaze.css

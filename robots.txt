@@ -1,0 +1,10 @@
+User-Agent: *
+Disallow: /
+
+Host: codebor.ru
+
+User-Agent: YadirectBot
+Disallow: /admin/
+Disallow: /contacts.hml
+
+Sitemap: http://codebor.ru/sitemap.xml

@@ -1,0 +1,53 @@
+.text-hide {
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+/*.text-hide {
+    font: 0/0 serif;
+    text-shadow: none;
+    color: transparent;
+}*/
+
+.br {
+    height: 3px;
+    background: rgb(255, 255, 255);
+    /* Old browsers */
+    
+    background: -webkit-linear-gradient(left, rgba(255, 255, 255, 1) 1%, rgba(28, 102, 122, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: -o-linear-gradient(left, rgba(255, 255, 255, 1) 1%, rgba(28, 102, 122, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(to right, rgba(255, 255, 255, 1) 1%, rgba(28, 102, 122, 1) 50%, rgba(255, 255, 255, 1) 100%);
+    /* FF3.6+ */
+    /* Chrome,Safari4+ */
+    /* Chrome10+,Safari5.1+ */
+    /* Opera 11.10+ */
+    /* IE10+ */
+    /* W3C */
+    
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#ffffff', GradientType=1);
+    /* IE6-9 */
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.container {
+    margin: auto;
+    /* Выравнивание по центру */
+    min-width: 500px;
+}
+
+footer {
+    /*position: fixed; Фиксированное положение */
+    left: 0;
+    bottom: 0;/* Левый нижний угол */
+    
+    width: 100%;/* Ширина слоя */
+}
