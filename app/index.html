@@ -3,15 +3,24 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>portfolio</title>
+    <title>Yuzhakov Boris</title>
     <!-- seo -->
     <meta name="description" content="Портфолио Южакова Бориса">
     <meta name="keywords" content="Портфолио Южаков Борис">
     <meta name="author" content="Южаков Борис">
-    <!-- css -->
+    <!-- fonts -->
+    <link rel="stylesheet" href="font/font.css">
+    <!-- css -->    
     <link rel="stylesheet" href="bower/normalize.css/normalize.css">
     <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/social.css">
+    <link rel="stylesheet" href="css/logo.css">
+    <link rel="stylesheet" href="css/menu.css">
+    <link rel="stylesheet" href="css/contacts.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/auth.css">
     <!-- js -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <!-- <script srd="bower/modernizr.js"></script> -->
@@ -21,32 +30,30 @@
 
 <body>
     <header>
-        <div class="header container">
-            <span class="logo">
-				<img src="img/logo-bower.png" class="logo-pic"><span class="logo-text">CodeBor</span>
-            </span>
-            <ul class="social-list">
+        <div class="header container clearfix">
+            <div class="logo icon-logo text-logo">CodeBor</div>
+            <ul class="social-list list-unstyled">
                 <li class="social-item">
                     <a href="https://vk.com/yuzbor" target="_blank">
-                        <div class="icon-social icon-vk"></div>
+                        <div class="sprite-icon-social sprite-icon-vk"></div>
                         <div class="text-social">Я в VKontakte</div>
                     </a>
                 </li>
                 <li class="social-item">
                     <a href="https://www.facebook.com/boris.yuzhakov" target="_blank">
-                        <div class="icon-social icon-fb"></div>
+                        <div class="sprite-icon-social sprite-icon-fb"></div>
                         <div class="text-social">Я на FaceBook</div>
                     </a>
                 </li>
                 <li class="social-item">
                     <a href="https://twitter.com/yuzbor" target="_blank">
-                        <div class="icon-social icon-tw"></div>
+                        <div class="sprite-icon-social sprite-icon-tw"></div>
                         <div class="text-social">Я на Twitter</div>
                     </a>
                 </li>
                 <li class="social-item">
                     <a href="https://github.com/borlss" target="_blank">
-                        <div class="icon-social icon-git"></div>
+                        <div class="sprite-icon-social sprite-icon-git"></div>
                         <div class="text-social">Я на GitHub</div>
                     </a>
                 </li>
@@ -54,12 +61,12 @@
         </div>
         <div class="br"></div>
     </header>
-    <div class="page container">
+    <div class="page container clearfix">
         <!-- Левое меню -->
         <aside class="sidebar">
             <!-- Навигация -->
             <nav class="nav">
-                <ul class="nav-list">
+                <ul class="nav-list list-unstyled">
                     <li class="nav-item aboutme active">
                     <a href="/"><span>Обо мне</span></a>
                     </li>
@@ -73,19 +80,18 @@
             </nav>
             <!-- Контакты -->
             <address class="contacts">
-                <ul class="contact-list">
-                	<li class="contact-item">Контакты</li>
-                    <li class="contact-item mail">
-                        <i class="icon-mail"></i>
-                        <a href="">yuzhakov.boris@gmail.com</a>
+                <ul class="contact-list list-unstyled">
+                	<li class="contact-item"><span class="text-header">Контакты</span></li>
+                    <li class="contact-item contact-icon icon-mail">
+                        <a href="#yuzhakov.boris@gmail.com">
+                            <span class="contact-data">yuzhakov.boris@gmail.com</span>
+                        </a>
                     </li>
-                    <li class="contact-item phone">
-                        <i class="icon-phone"></i>
-                        <a href="tel:+79251234567">+7(925)123-45-67</a>
+                    <li class="contact-item contact-icon icon-phone">
+                        <a href="tel:+79251234567"><span class="contact-data">+7(925)123-45-67</span></a>
                     </li>
-                    <li class="contact-item skype">
-                        <i class="icon-skype"></i>
-                        <a href="skype:skypelogin">skypelogin</a>
+                    <li class="contact-item contact-icon icon-skype">
+                        <a href="skype:skypelogin"><span class="contact-data">spaskypelogin</span></a>
                     </li>
                 </ul>
             </address>
@@ -98,11 +104,9 @@
                 <div class="box-header">Основная информация</div>
                 <div class="box-content">
                     <div class="box-image">
-                        <div class="image-wrapper">
-                            <img src="img/user/userpicboy.png" height="148" width="147" alt="Южаков Борис" class="avatar">
-                        </div>
+                        <img src="img/user/borls.png" alt="Южаков Борис" class="icon-round">
                     </div>
-                    <ul class="aboutme-list">
+                    <ul class="aboutme-list list-unstyled">
                         <li class="aboutme-item clearfix">
                             <div class="aboutme-what">Меня зовут:</div>
                             <div class="aboutme-info">Южаков Борис Борисович</div>
@@ -120,14 +124,14 @@
                             <div class="aboutme-info">FrontEnd developer</div>
                         </li>
                         <li class="aboutme-item clearfix">
-                            <div class="aboutme-what">Ключевые навыки</div>
+                            <div class="aboutme-what">Ключевые навыки:</div>
                             <div class="aboutme-info">
-                                <ul class="skill-list">
-                                    <li class="skill-item">html</li>
-                                    <li class="skill-item">css</li>
-                                    <li class="skill-item">js</li>
-                                    <li class="skill-item">gulp</li>
-                                    <li class="skill-item">git</li>
+                                <ul class="skill-list list-unstyled">
+                                    <li class="skill-item btn-blue">html</li>
+                                    <li class="skill-item btn-blue">css</li>
+                                    <li class="skill-item btn-blue">javascript</li>
+                                    <li class="skill-item btn-blue">gulp</li>
+                                    <li class="skill-item btn-blue">git</li>
                                 </ul>
                             </div>
                         </li>
@@ -138,12 +142,12 @@
             <section class="box">
                 <div class="box-header">Опыт работы</div>
                 <div class="box-content">
-                    <ul class="box-list">
-                        <li class="box-item icon-work">
+                    <ul class="box-list list-unstyled">
+                        <li class="box-item icon-work before-icon">
                             <div class="where">"OOO Tesis" - c++ developer</div>
                             <div class="interval">Сентябрь 2009 - Август 2013</div>
                         </li>
-                        <li class="box-item icon-work">
+                        <li class="box-item icon-work before-icon">
                             <div class="where">"OOO Communa" - frontend developer</div>
                             <div class="interval">Февраль 2014 - Март 2015</div>
                         </li>
@@ -154,12 +158,12 @@
             <section class="box">
                 <div class="box-header">Образование</div>
                 <div class="box-content">
-                    <ul class="box-list">
-                        <li class="box-item icon-college">
+                    <ul class="box-list list-unstyled">
+                        <li class="box-item icon-education before-icon">
                             <div class="where">МФТИ ФАКИ, Магистр</div>
                             <div class="interval">Сентябрь 2005 - Май 2011</div>
                         </li>
-                        <li class="box-item icon-course">
+                        <li class="box-item icon-page before-icon">
                             <div class="where">Курсы LoftScool</div>
                             <div class="interval">Март 2015 - настоящее время</div>
                         </li>
@@ -177,7 +181,7 @@
                 <div class="login locked">
                     <a href="#login"></a>
                 </div>
-                <div class="copyright">&copy; Это сайт Южакова Бориса. Пожалуйста, не используйте материалы этого сайта, без разрешения автора.</div>
+                <div class="copyright">&copy; Это сайт Южакова Бориса. Пожалуйста, не используйте материалы этого сайта без разрешения автора.</div>
             </div>
         </div>
     </footer>

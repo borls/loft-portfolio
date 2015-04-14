@@ -1,0 +1,21 @@
+.logo {
+    float: left;
+}
+
+.icon-logo {
+    padding: 0 0 0 105px;
+}
+
+.icon-logo:before {
+    content: '';
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    margin-left: -75px;
+    background: url(/img/logo-bower.png) no-repeat;
+    background-size: contain;
+}
+
+.text-logo {
+    font: 500 30px FiraSansBook;
+}

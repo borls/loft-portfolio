@@ -1,0 +1,102 @@
+.content {
+    float: right;
+    width: 650px;
+}
+
+section.box {
+    background-color: #eff3f7;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.box-header {
+    color: #3ba8c0;
+    font: 300 27px FiraSansLight;
+    padding: 15px 23px;
+    text-align: left;
+    display: inline-block;
+    border-bottom: 2px solid #3ba8c0;
+}
+
+.box-content {
+    padding: 20px;
+}
+
+.box-image {
+    float: left;
+    max-width: 150px;
+    margin: 23px 23px 20px 36px;
+}
+
+.aboutme-list {
+    display: inline-block;
+    min-width: 400px;
+}
+
+.aboutme-item {
+    margin: 6px 0 13px;
+}
+
+.aboutme-what,
+.about-info {
+    float: left;
+}
+
+.aboutme-what {
+    color: #4a545d;
+    font: 500 17px FiraSansRegular;
+    padding-right: 20px;
+}
+
+.aboutme-info {
+    color: #37424d;
+    font: 300 15px FiraSansLight;
+}
+
+.skill-list {
+    display: inline-block;
+    width: 220px;
+}
+
+.box-item {
+    margin: 5px 0 19px;
+}
+
+.before-icon {
+    padding: 0 0 0 105px;
+}
+
+.before-icon:before {
+    content: '';
+    position: absolute;
+    
+    width: 42px;
+    height: 34px;
+    background-repeat: no-repeat;
+}
+
+.icon-work:before {
+    margin-left: -80px;
+    background-image: url(/img/icon-work.png);
+}
+
+.icon-education:before {
+    margin-left: -80px;
+    background-image:url(/img/icon-education.png);
+}
+
+.icon-page:before {
+    margin-left: -71px;
+    background-image:url(/img/icon-page.png);
+}
+
+
+.where {
+    color: #4a545d;
+    font: 300 17px FiraSansBook;
+}
+
+.interval {
+    color: #4a545d;
+    font: 300 15px FiraSansLight;
+}

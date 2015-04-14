@@ -1,0 +1,15 @@
+.login {
+    width: 20px;
+    height: 32px;
+    margin-top: 11px;
+    float: left;
+    background-repeat: no-repeat;
+}
+
+.locked {
+    background-image: url(/img/login/locked.png);
+}
+
+.unlocked {
+    background-image: url(/img/login/unlocked.png);
+}

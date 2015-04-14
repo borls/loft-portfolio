@@ -1,3 +1,14 @@
+# Mac OS X stuff
 .DS_Store
+
+# Windows stuff
+Thumbs.db
+
+# JetBrains stuff
+.idea
+
+# node modules
 node_modules
+
+# bower modules
 app/bower

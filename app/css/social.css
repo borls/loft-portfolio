@@ -1,0 +1,61 @@
+.social-list {
+    float: right;
+    display: inline-block;
+    vertical-align: middle;
+}
+
+.social-list li {
+    float: left;
+}
+
+/* hide social button text */
+.text-social {
+    display: none;
+}
+
+.icon-social {
+    width: 47px;
+    height: 47px;
+    background-repeat: no-repeat;
+    float: left;
+    padding-right: 10px;
+}
+.sprite-icon-social {
+    width: 47px;
+    height: 47px;
+    background: url(/img/social/sprite-social.png) no-repeat;
+    float: left;
+    padding-right: 10px;
+}
+
+.sprite-icon-fb {
+    background-position: -5px -5px;
+}
+
+.sprite-icon-fb:hover {
+    background-position: -62px -5px;
+}
+
+.sprite-icon-git {
+    background-position: -119px -5px;
+}
+
+.sprite-icon-git:hover {
+    background-position: -176px -5px;
+}
+
+.sprite-icon-tw {
+    background-position: -233px -5px;
+}
+
+.sprite-icon-tw:hover {
+    background-position: -290px -5px;
+}
+
+.sprite-icon-vk {
+    background-position: -347px -5px;
+}
+
+.sprite-icon-vk:hover {
+    background-position: -404px -5px;
+}
