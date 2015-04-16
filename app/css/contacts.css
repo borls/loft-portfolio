@@ -3,9 +3,14 @@
     font: 300 17px/40px FiraSansLight;
 }
 
+.contact-item a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%;
+}
 
-.contact-item > .text-header {
-    margin-left: 20px;
+.contact-item.contact-header {
+    padding-left: 20px;
     line-height: 40px;
     font-size: 21px;
 }
@@ -14,19 +19,13 @@
     color: #ffffff
 }
 .contact-item > a:hover {
-    color: #3ba8c0;
+    font-size: 20px;
+    color: #fefefe;
 }
 
-.contact-item .contact-icon {
-    margin: -30px 42px;
-    width: 21px;
-    height: 21px;
-    background-repeat: no-repeat;
-    position: absolute;
-}
 
 .contact-item .contact-data {
-    margin-left: 83px;
+    margin-left: 80px;
 }
 
 
@@ -74,8 +73,3 @@
 	background-color: #51daf8;
 }
 
-.contact-item a {
-    text-decoration: none;
-    display: inline-block;
-    width: 100%;
-}
