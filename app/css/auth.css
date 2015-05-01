@@ -1,15 +1,23 @@
-.login {
-    width: 20px;
+
+.lock {
+    position: absolute;
+    top: 26px;
+    left: 20px;
+}
+
+.lock .lock-inner {
+    display: block;
+    width: 0px;
     height: 32px;
-    margin-top: 11px;
-    float: left;
-    background-repeat: no-repeat;
+    font: 300 16px fira_sanslight;
+    line-height: 2.2;
+    color: #4a545d;
+    text-decoration: none;
+    background: url(/img/sprite-auth.png) -5px -5px no-repeat;
+    /*background-position: -5px -5px;*/
+    padding-left: 24px;
 }
-
-.locked {
-    background-image: url(/img/login/locked.png);
-}
-
-.unlocked {
-    background-image: url(/img/login/unlocked.png);
+.lock .lock-inner:hover {
+    background-position: -35px -5px;
+    text-decoration: underline;
 }

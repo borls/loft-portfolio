@@ -1,0 +1,9 @@
+@font-face {
+    font-family: 'OgilvieCyr';
+    src: url('vxex3dsy-webfont.eot');
+    src: url('vxex3dsy-webfont.eot?#iefix') format('embedded-opentype'),
+         url('vxex3dsy-webfont.woff') format('woff'),
+         url('vxex3dsy-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}

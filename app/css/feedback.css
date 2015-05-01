@@ -1,0 +1,28 @@
+.aboutbox {
+    /* Чтобы подсказки вылезали за пределы бокса */
+    overflow: visible;
+}
+
+.feedback-header {
+	height: 138px;
+	background-color: #48cbe8;
+	border-bottom: 17px solid #67dffa;
+	font: 300 27px/121px fira_sansbook;
+	color: white;
+	text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-body {
+    padding: 39px 124px 202px 106px;
+}
+
+.form-wrapper {
+    padding-bottom: 24px;
+}
+.capcha {
+    background-color: #ffffff;
+    color: #58697a;
+    font: 43px OgilvieCyr;
+    text-align: center;
+}

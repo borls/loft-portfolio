@@ -1,0 +1,86 @@
+/* Face */
+.image-box {
+    float: left;
+    margin-left: 5px;
+    margin-top: 18px;
+}
+.image-wrap {
+    width: 142px;
+    height: 142px;
+    border-radius: 50% 50%;
+    overflow: hidden;
+    border: 5px solid #3ba8c0;
+}
+
+.avatar {
+    width: 100%;
+}
+
+/* List of anket data */
+.aboutbox .aboutme-list {
+    float: left;
+    margin: 0 0 0 22px;
+    width: 400px;
+}
+
+.aboutbox .aboutme-item {
+    margin-bottom: 8px;
+}
+.aboutbox .aboutme-what {
+    float: left;
+    /*color: #4a545d;*/
+    font: 500 17px fira_sansmedium;
+}
+.aboutbox .aboutme-info {
+    float: left;
+    margin-left: 15px;
+    /*max-width: 260px;*/
+    /*color: #37424d;*/
+    font: 300 15px fira_sanslight;
+    overflow: hidden;
+    max-width: 218px;
+}
+/* Skills */
+.aboutbox .skill-list {
+    width: 224px;
+    padding: 0;
+}
+
+.aboutbox .skill-list .skill-item {
+    margin: 0 6px 6px 0;
+    min-width: 40px;
+}
+
+/* */
+
+.aboutbox-item {
+    padding: 0 0 0 76px;
+    margin-top: 20px;
+}
+
+.aboutbox-item:last-child {
+    margin-bottom: 0;
+}
+
+.aboutbox-item .where {
+    font-family: fira_sansbook;
+    font-size: 16px;
+}
+
+.aboutbox-item .interval {
+    font-family: fira_sanslight;
+    font-size: 15px;
+    line-height: 1;
+}
+
+.aboutbox-item.icon-work {
+    background: url(/img/icon-work.png) 9px center no-repeat;
+}
+
+.aboutbox-item.icon-education {
+    background: url(/img/icon-education.png) 9px center no-repeat;
+}
+
+.aboutbox-item.icon-page {
+    background: url(/img/icon-page.png) 17px center no-repeat;
+}

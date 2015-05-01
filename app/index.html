@@ -1,8 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<!--нужен для того, чтобы на скрин-ридерах хорошо отоброжался русский текст-->
+<html lang="ru-RU">
 
 <head>
     <meta charset="UTF-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>portfolio</title>
     <!-- seo -->
     <meta name="description" content="Портфолио Южакова Бориса">
@@ -26,19 +28,23 @@
     <meta name="msapplication-TileColor" content="#ffffff">
     <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
-    <!-- fonts -->
+    <!-- fonts css -->
     <link rel="stylesheet" href="font/font.css">
-    <!-- css -->
+    <!-- vendor css -->
     <link rel="stylesheet" href="bower/normalize.css/normalize.css">
+    <!-- common css -->
     <link rel="stylesheet" href="css/common.css">
     <link rel="stylesheet" href="css/buttons.css">
     <link rel="stylesheet" href="css/main.css">
     <link rel="stylesheet" href="css/social.css">
     <link rel="stylesheet" href="css/logo.css">
-    <link rel="stylesheet" href="css/menu.css">
-    <link rel="stylesheet" href="css/contacts.css">
-    <link rel="stylesheet" href="css/content.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/auth.css">
+    <link rel="stylesheet" href="css/content.css">
+
+    <!-- page css -->
+    <link rel="stylesheet" href="css/about_me.css">
     <!-- js -->
     <script src="bower/jquery/dist/jquery.js"></script>
     <!-- <script srd="bower/modernizr.js"></script> -->
@@ -47,167 +53,177 @@
 </head>
 
 <body>
-    <!-- Header -->
-    <header>
-        <div class="header container clearfix">
-            <div class="logo icon-logo text-logo">CodeBor</div>
-            <ul class="social-list list-unstyled">
-                <li class="social-item ">
-                    <a href="https://vk.com/yuzbor" target="_blank" class="icon-social icon-vk">
-                        <span class="invisible">Я в VKontakte</span>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a href="https://www.facebook.com/boris.yuzhakov" target="_blank" class="icon-social icon-fb">
-                        <span class="invisible">Я на FaceBook</span>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a href="https://twitter.com/yuzbor" target="_blank" class="icon-social icon-tw">
-                        <span class="invisible">Я на Twitter</span>
-                    </a>
-                </li>
-                <li class="social-item">
-                    <a href="https://github.com/borlss" target="_blank" class="icon-social icon-git">
-                        <span class="invisible">Я на GitHub</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-        <div class="br"></div>
-    </header>
-    <!-- / Header -->
+    <div class="wrapper">
+        <div class="main-content">
+            <!-- Header -->
+            <header class="header">
+                <div class="container">
+                    <a href="/" class="logo-link hide-text">CodeBor</a>
+                    <ul class="social-list list-unstyled">
+                        <li class="social-item ">
+                            <a href="https://vk.com/yuzbor" target="_blank" class="social-link vk hide-text">
+                                Я в VKontakte
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://www.facebook.com/boris.yuzhakov" target="_blank" class="social-link fb hide-text">
+                                Я на FaceBook
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://twitter.com/yuzbor" target="_blank" class="social-link tw hide-text">
+                                Я на Twitter
+                            </a>
+                        </li>
+                        <li class="social-item">
+                            <a href="https://github.com/borlss" target="_blank" class="social-link git hide-text">
+                                Я на GitHub
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <!--        <div class="br"></div>-->
+            </header>
+            <!-- / Header -->
 
-    <!-- Page Body -->
-    <div class="  container clearfix">
-        <!-- Left Menu -->
-        <aside class="sidebar">
-            <!-- Navigation -->
-            <nav class="nav">
-                <ul class="nav-list list-unstyled">
-                    <li class="nav-item aboutme active">
-                        <a href="/"><span>Обо мне</span></a>
-                    </li>
-                    <li class="nav-item projectme">
-                        <a href="/"><span>Мои работы</span></a>
-                    </li>
-                    <li class="nav-item contactme">
-                        <a href="/"><span>Связаться со мной</span></a>
-                    </li>
-                </ul>
-            </nav>
-            <!-- / Navigation -->
-            <!-- Contacts -->
-            <address>
-                <ul class="contact-list list-unstyled">
-                    <li class="contact-item contact-header">
-                        Контакты
-                    </li>
-                    <li class="contact-item contact-icon icon-mail">
-                        <a href="#yuzhakov.boris@gmail.com">
-                            <span class="contact-data">yuzhakov.boris@gmail.com</span>
-                        </a>
-                    </li>
-                    <li class="contact-item contact-icon icon-phone">
-                        <a href="tel:+79251234567">
-                            <span class="contact-data">+7(925)123-45-67</span>
-                        </a>
-                    </li>
-                    <li class="contact-item contact-icon icon-skype">
-                        <a href="skype:skypelogin">
-                            <span class="contact-data">spaskypelogin</span>
-                        </a>
-                    </li>
-                </ul>
-            </address>
-            <!--s / Contacts -->
-        </aside>
-        <!-- / Left Menu -->
-        
-        <!-- Content -->
-        <div class="content">
-            <!-- About Me -->
-            <section class="box">
-                <div class="box-header">Основная информация</div>
-                <div class="box-content">
-                    <div class="box-image">
-                        <img src="img/user/borls.png" alt="Южаков Борис" class="icon-round">
-                    </div>
-                    <ul class="aboutme-list list-unstyled">
-                        <li class="aboutme-item clearfix">
-                            <div class="aboutme-what">Меня зовут:</div>
-                            <div class="aboutme-info">Южаков Борис Борисович</div>
-                        </li>
-                        <li class="aboutme-item clearfix">
-                            <div class="aboutme-what">Мой возраст:</div>
-                            <div class="aboutme-info">28 лет</div>
-                        </li>
-                        <li class="aboutme-item clearfix">
-                            <div class="aboutme-what">Мой город:</div>
-                            <div class="aboutme-info">Москва, Россия</div>
-                        </li>
-                        <li class="aboutme-item clearfix">
-                            <div class="aboutme-what">Моя специализация:</div>
-                            <div class="aboutme-info">FrontEnd developer</div>
-                        </li>
-                        <li class="aboutme-item clearfix">
-                            <div class="aboutme-what">Ключевые навыки:</div>
-                            <div class="aboutme-info">
-                                <ul class="skill-list list-unstyled">
-                                    <li class="skill-item btn-blue">html</li>
-                                    <li class="skill-item btn-blue">css</li>
-                                    <li class="skill-item btn-blue">javascript</li>
-                                    <li class="skill-item btn-blue">gulp</li>
-                                    <li class="skill-item btn-blue">git</li>
-                                </ul>
+            <!-- Container -->
+            <div class="container clearfix">
+                <!-- Left Menu -->
+                <aside class="sidebar">
+                    <!-- Navigation -->
+                    <nav class="nav">
+                        <ul class="nav-list list-unstyled">
+                            <li class="nav-item aboutme active">
+                                <a class="nav-link" href="index.html">Обо мне</a>
+                            </li>
+                            <li class="nav-item projectme">
+                            <a class="nav-link" href="project.html">Мои работы</a>
+                            </li>
+                            <li class="nav-item contactme">
+                                <a class="nav-link" href="feedback.html">Связаться со мной</a>
+                            </li>
+                        </ul>
+                    </nav>
+                    <!-- / Navigation -->
+                    <!-- Contacts -->
+                    <address class="contact">
+                        <div class="contact-header">
+                            <span class="header-inner-text">Контакты</span>
+                        </div>
+                        <ul class="contact-list list-unstyled">
+                            <li class="contact-item mail">
+                                <a class="contact-link" href="#yuzhakov.boris@gmail.com">
+                                    <span class="contact-text">yuzhakov.boris@gmail.com</span>
+                                    
+                                </a>
+                            </li>
+                            <li class="contact-item phone">
+                                <a class="contact-link" href="tel:+79251234567">
+                                    <span class="contact-text">+7(925)123-45-67</span>
+                                </a>
+                            </li>
+                            <li class="contact-item skype">
+                                <a class="contact-link" href="skype:skypelogin">
+                                    <span class="contact-text">skypelogin</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </address>
+                    <!-- / Contacts -->
+                </aside>
+                <!-- / Left Menu -->
+
+                <!-- Variable Content -->
+                <div class="variable-content">
+                    <!-- About Me -->
+                    <section class="aboutbox">
+                        <div class="aboutbox-header">Основная информация</div>
+                        <div class="aboutbox-body clearfix">
+                            <div class="aboutbox-image">
+                                <div class="image-box">
+                                    <div class="image-wrap">
+                                        <img src="img/user/borls.png" alt="Южаков Борис" class="avatar">
+                                    </div>
+                                </div>
+
                             </div>
-                        </li>
-                    </ul>
+                            <ul class="aboutme-list list-unstyled">
+                                <li class="aboutme-item clearfix">
+                                    <div class="aboutme-what">Меня зовут:</div>
+                                    <div class="aboutme-info">Южаков Борис Борисович</div>
+                                </li>
+                                <li class="aboutme-item clearfix">
+                                    <div class="aboutme-what">Мой возраст:</div>
+                                    <div class="aboutme-info">28 лет</div>
+                                </li>
+                                <li class="aboutme-item clearfix">
+                                    <div class="aboutme-what">Мой город:</div>
+                                    <div class="aboutme-info">Москва, Россия</div>
+                                </li>
+                                <li class="aboutme-item clearfix">
+                                    <div class="aboutme-what">Моя специализация:</div>
+                                    <div class="aboutme-info">FrontEnd developer</div>
+                                </li>
+                                <li class="aboutme-item clearfix">
+                                    <div class="aboutme-what">Ключевые навыки:</div>
+                                    <div class="aboutme-info">
+                                        <ul class="skill-list list-unstyled">
+                                            <li class="skill-item btn-blue">html</li>
+                                            <li class="skill-item btn-blue">css</li>
+                                            <li class="skill-item btn-blue">javascript</li>
+                                            <li class="skill-item btn-blue">gulp</li>
+                                            <li class="skill-item btn-blue">git</li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- Expirience -->
+                    <section class="aboutbox">
+                        <div class="aboutbox-header">Опыт работы</div>
+                        <div class="aboutbox-body">
+                            <ul class="aboutbox-list list-unstyled">
+                                <li class="aboutbox-item icon-work before-icon">
+                                    <div class="where">"OOO Tesis" - c++ developer</div>
+                                    <div class="interval">Сентябрь 2009 - Август 2013</div>
+                                </li>
+                                <li class="aboutbox-item icon-work before-icon">
+                                    <div class="where">"OOO Communa" - frontend developer</div>
+                                    <div class="interval">Февраль 2014 - Март 2015</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
+                    <!-- Education -->
+                    <section class="aboutbox">
+                        <div class="aboutbox-header">Образование</div>
+                        <div class="aboutbox-body">
+                            <ul class="aboutbox-list list-unstyled">
+                                <li class="aboutbox-item icon-education before-icon">
+                                    <div class="where">МФТИ ФАКИ, Магистр</div>
+                                    <div class="interval">Сентябрь 2005 - Май 2011</div>
+                                </li>
+                                <li class="aboutbox-item icon-page before-icon">
+                                    <div class="where">Курсы LoftScool</div>
+                                    <div class="interval">Март 2015 - настоящее время</div>
+                                </li>
+                            </ul>
+                        </div>
+                    </section>
                 </div>
-            </section>
-            <!-- Expirience -->
-            <section class="box">
-                <div class="box-header">Опыт работы</div>
-                <div class="box-content">
-                    <ul class="box-list list-unstyled">
-                        <li class="box-item icon-work before-icon">
-                            <div class="where">"OOO Tesis" - c++ developer</div>
-                            <div class="interval">Сентябрь 2009 - Август 2013</div>
-                        </li>
-                        <li class="box-item icon-work before-icon">
-                            <div class="where">"OOO Communa" - frontend developer</div>
-                            <div class="interval">Февраль 2014 - Март 2015</div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
-            <!-- Образование -->
-            <section class="box">
-                <div class="box-header">Образование</div>
-                <div class="box-content">
-                    <ul class="box-list list-unstyled">
-                        <li class="box-item icon-education before-icon">
-                            <div class="where">МФТИ ФАКИ, Магистр</div>
-                            <div class="interval">Сентябрь 2005 - Май 2011</div>
-                        </li>
-                        <li class="box-item icon-page before-icon">
-                            <div class="where">Курсы LoftScool</div>
-                            <div class="interval">Март 2015 - настоящее время</div>
-                        </li>
-                    </ul>
-                </div>
-            </section>
+                <!-- /Variable Content -->
+            </div>
+            <!-- Container -->
         </div>
-        <!-- /Контент -->
     </div>
-    </div>
-    <footer>
-        <div class="br"></div>
-        <div class="footer container">
+    <footer class="footer">
+        <div class="container">
             <div class="footer-wrapper">
-                <div class="login locked">
-                    <a href="#login"></a>
+                <div class="lock">
+                    <a href="#login" class="lock-inner">Войти</a>
                 </div>
+                
                 <div class="copyright">&copy; Это сайт Южакова Бориса. Пожалуйста, не используйте материалы этого сайта без разрешения автора.</div>
             </div>
         </div>

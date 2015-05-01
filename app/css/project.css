@@ -1,0 +1,89 @@
+.project-item {
+    float: left;
+    margin: 7px;
+    text-align: center;
+    width: 181px;
+    height: 240px;
+}
+
+.project-image {
+    height: 127px;
+    border: 2px solid #3ba8c0;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.project-name-bg {
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(1, 108, 164, 0.749);
+    border-radius: 3px;
+}
+
+.project-name-bg>div {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.project-name-text {
+    border: 2px solid #eff3f7;
+    border-radius: 6px;
+    padding: 3px 4px;
+    color: #eff3f7;
+    font: 300 12px fira_sanslight;
+}
+
+.project-image:hover .project-name-bg {
+    display: table;
+}
+
+.project-link {
+    text-decoration: none;
+    color: #3ba8c0;
+    font: italic 300 13px fira_sanslight;
+    line-height: 30px;
+}
+
+.project-description {
+    color: #4a545d;
+    font: 300 15px fira_sanslight;
+}
+
+.project1 {
+    background-image: url(/img/projects/p1.png);
+}
+
+.project2 {
+    background-image: url(/img/projects/p2.png);
+}
+
+.project3 {
+    background-image: url(/img/projects/p3.png);
+}
+
+.project4 {
+    background-image: url(/img/projects/p4.png);
+}
+
+.project-append {
+    border-style: dashed;
+    background-color: #edf8fc;
+    display: table;
+    width: 100%;
+}
+
+.project-append-wrapper {
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    color: #3ba8c0;
+    font: 300 13px fira_sanslight;
+}
+
+.project-append-icon {
+    margin: auto;
+    width: 32px;
+    height: 32px;
+    background-image: url(/img/projects/icon-project-append.png);
+}

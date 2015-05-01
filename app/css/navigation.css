@@ -1,0 +1,73 @@
+ /* Left Menu */
+.sidebar {
+    float: left;
+    width: 250px;
+}
+
+/* Variable Content */
+.variable-content {
+    width: 650px;
+    float: right;
+}
+
+.nav {
+    overflow: hidden; /* Чтобы осталось скругление */
+    background: #eff3f7;
+    border-radius: 5px;
+    margin-bottom: 26px;
+}
+
+.nav .nav-item {
+    border-bottom: 2px solid #3ba8c0;
+    margin: 0 11px;
+}
+
+.nav .nav-item:last-child {
+    border-bottom: none;
+}
+
+.nav .nav-item.active {
+    background: #3ba8c0;
+    margin: 0;
+    border-bottom: none; /* Remove underline */
+    padding-left: 11px;
+    margin-top: -2px; /* Hack */
+}
+
+.nav .nav-item.active:first-child {
+    margin-top: 0; /* Hack */
+}
+
+.nav .nav-link {
+    text-decoration: none;
+    display: block;
+    margin-left: 16px;
+    padding: 20px 0;
+    color: #959aa8;
+    font: 300 20px fira_sanslight;
+}
+   
+.nav .nav-link:hover {
+    color: #3ba8c0;
+}
+       
+.nav .nav-link:hover {
+    color: #3ba8c0;
+}
+    
+.nav .nav-item.active .nav-link {
+    color: #f9fafb;
+}
+
+/* Второй способ создания черты между пунктами */
+/* Ставим между любыми неактивными блоками */
+/* 
+.nav-item:not(.active) +.nav-item:not(.active) a:before {
+    content: '';
+    position: absolute;
+    border-bottom: 2px solid #3ba8c0;
+    margin-left: 10px;
+    margin-top: -70px;
+    width: 230px;
+    height: 70px;
+}

@@ -1,3 +1,21 @@
+.logo-link {
+    position: absolute;    
+    display:block;
+    width: 119px;
+    height: 100%;
+    background: url(/img/logo-bower.png) no-repeat;
+    background-size: contain;
+}
+
+
+/*
+.logo-text {
+    position: absolute;
+    left: -9999px;
+}
+*/
+
+/*
 .logo {
     float: left;
 }
@@ -17,5 +35,6 @@
 }
 
 .text-logo {
-    font: 500 30px FiraSansBook;
+    font: 500 30px fira_sansbook;
 }
+*/

@@ -1,35 +1,85 @@
+html {
+    height: 100%;
+}
+
 body {
-    margin: 0;
-    background: url(/img/bg.png);
+    height: 100%;
+    color: #959aa8;
+    color: #4a545d;
+    background: url(/img/bg.png) repeat;
+    font-family: fira_sanslight;
 }
 
-header {
+.wrapper {
+    position: relative;
+    min-height: 100%;
+    height: auto!important;
+    overflow: hidden;
+}
+.wrapper:after {
+    content: '';
+    height: 80px;
+    display: block;
+}
+
+/* HEADER */
+
+.header {
+    position: relative;
+    height: 119px;
     background-color: #eff3f7;
-    min-width: 500px;
+    margin-bottom: 39px;
 }
 
-.header.container {
-    max-width: 1260px;
-    padding: 10px;
+.header:after {
+    display: block;
+    content: " ";
+    background-image: -moz-linear-gradient( 0deg, rgb(28, 102, 122) 0%, rgb(246, 250, 254) 0%, rgb(216, 216, 216) 0%, rgb(242, 246, 250) 0%, rgb(135, 174, 186) 28%, rgb(28, 102, 122) 48%, rgb(135, 174, 186) 71%, rgb(242, 246, 250) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(28, 102, 122) 0%, rgb(246, 250, 254) 0%, rgb(216, 216, 216) 0%, rgb(242, 246, 250) 0%, rgb(135, 174, 186) 28%, rgb(28, 102, 122) 48%, rgb(135, 174, 186) 71%, rgb(242, 246, 250) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(28, 102, 122) 0%, rgb(246, 250, 254) 0%, rgb(216, 216, 216) 0%, rgb(242, 246, 250) 0%, rgb(135, 174, 186) 28%, rgb(28, 102, 122) 48%, rgb(135, 174, 186) 71%, rgb(242, 246, 250) 100%);
+    height: 3px;
 }
+
+.header > .container {
+    max-width: 1200px;
+    max-width: 960px;
+}
+
+/* CONTAINER */
 
 .page.container {
     max-width: 960px;
     padding: 32px 0 64px 0
 }
 
-.footer.container {
+/* FOOTER */
+
+.footer {
+    height: 80px;
+    margin-top: -80px;
+/*    background: #eff3f7 url(/img/line.png) top center no-repeat;*/
+    background: #eff3f7;
+}
+
+.footer:after {
+    display: block;
+    content: " ";
+    background-image: -moz-linear-gradient( 0deg, rgb(28, 102, 122) 0%, rgb(246, 250, 254) 0%, rgb(216, 216, 216) 0%, rgb(242, 246, 250) 0%, rgb(135, 174, 186) 28%, rgb(28, 102, 122) 48%, rgb(135, 174, 186) 71%, rgb(242, 246, 250) 100%);
+    background-image: -webkit-linear-gradient( 0deg, rgb(28, 102, 122) 0%, rgb(246, 250, 254) 0%, rgb(216, 216, 216) 0%, rgb(242, 246, 250) 0%, rgb(135, 174, 186) 28%, rgb(28, 102, 122) 48%, rgb(135, 174, 186) 71%, rgb(242, 246, 250) 100%);
+    background-image: -ms-linear-gradient( 0deg, rgb(28, 102, 122) 0%, rgb(246, 250, 254) 0%, rgb(216, 216, 216) 0%, rgb(242, 246, 250) 0%, rgb(135, 174, 186) 28%, rgb(28, 102, 122) 48%, rgb(135, 174, 186) 71%, rgb(242, 246, 250) 100%);
+    height: 3px;
+    margin-top: -83px;
+}
+
+.footer > .container {
     max-width: 960px;
 }
 
-footer {
-    background-color: #eff3f7;
-}
-
-footer .copyright {
+.footer .copyright {
     text-align: center;
-    line-height: 60px;
-    white-space: nowrap;
+    /*white-space: nowrap;*/
+    margin: 0 180px;
+    padding-top: 25px;
     color: #4a545d;
-    font: 300 13px/60px FiraSansLight;
+    font: 300 13px fira_sanslight;
 }

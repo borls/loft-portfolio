@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+}
+
+.form-field {
+    position: relative;
+}
+
+.form-label {
+    color: #959aa8;
+    font: 300 19px fira_sanslight;
+}
+
+.form {
+    font: 300 13px fira_sanslight;
+    padding: 9px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 100%;
+}
+
+textarea.form {
+    resize: none;
+}
+
+.form-box {
+    padding: 0 0 9px 18px;
+}
+
+
+.form-blue {
+    color: #48cbe8;
+    border-color: #48cbe8;
+}
+
+.form-blue::-webkit-input-placeholder {
+    color: #48cbe8;
+    text-overflow: ellipsis;
+}
+
+.form-blue::-moz-placeholder {
+    color: #48cbe8;
+    text-overflow: ellipsis;
+}
+
+.form-blue:-ms-input-placeholder {
+    color: #48cbe8;
+    text-overflow: ellipsis;
+}
+
+.form-blue::placeholder {
+    color: #48cbe8;
+    text-overflow: ellipsis;
+}
+
+.form-blue:focus::-webkit-input-placeholder {
+    opacity: 0;
+}
+
+.form-blue:focus::-moz-placeholder {
+    opacity: 0;
+}
+
+.form-blue:focus:-ms-input-placeholder {
+    opacity: 0;
+}
+
+.form-blue:focus::placeholder {
+    opacity: 0;
+}
+
+.form-red {
+    color: #959aa8;
+    background: #fdd5d2;
+    border-color: #f97e76;
+    transition: all .2s ease-in-out;
+}
+
+.col-6 {
+    width: 50%;
+    float: left;
+}
+
+/* Error arrow box */
+
+.arrow-box {
+    position: absolute;
+    font: 300 13px/26px fira_sanslight;
+    padding: 0 15px;
+    top: 50%;
+    margin-top: -14px;
+    background-color: #f97e76;
+    border-radius: 2px;
+    color: #fff;
+    white-space: nowrap;
+    display: none;
+}
+
+.arrow-box:after {
+    content: '';
+    position: absolute;
+    border: 5px solid;
+}
+
+/* Left box */
+.tooltip-left .arrow-box {
+    margin-right: 6px;
+    right: 100%;
+}
+
+.tooltip-left .arrow-box:after {
+    border-color: transparent transparent transparent #f97e76;
+    left: 100%;
+    top: 50%;
+    margin-top: -6px;
+}
+
+/* Right box */
+.tooltip-right .arrow-box {
+    margin-left: 6px;
+    left: 100%;
+}
+
+.tooltip-right .arrow-box:after {
+    border-color: transparent #f97e76 transparent transparent;
+    right: 100%;
+    top: 50%;
+    margin-top: -6px;
+}
+
+.form-right {
+  text-align: right!important;
+}
