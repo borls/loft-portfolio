@@ -84,6 +84,7 @@ textarea.form {
 /* Error arrow box */
 
 .arrow-box {
+    /*display: none;*/
     position: absolute;
     font: 300 13px/26px fira_sanslight;
     padding: 0 15px;
@@ -93,7 +94,6 @@ textarea.form {
     border-radius: 2px;
     color: #fff;
     white-space: nowrap;
-    display: none;
 }
 
 .arrow-box:after {
@@ -129,5 +129,24 @@ textarea.form {
 }
 
 .form-right {
-  text-align: right!important;
+    text-align: right!important;
+}
+
+.form-center {
+    text-align: center!important;
+}
+
+
+.form-error {
+    color: #f97e76;
+    padding: 0 9px;
+}
+
+.form-error .error-title {
+    font-size: 25px;
+    line-height: 1.4;
+}
+
+.form-error .error-message {
+    font-size: 15px;
 }

@@ -44,6 +44,8 @@
     <link rel="stylesheet" href="css/content.css">
 
     <!-- page css -->
+    <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/modal.css">
     <link rel="stylesheet" href="css/project.css">
     <!-- js -->
     <script src="bower/jquery/dist/jquery.js"></script>
@@ -53,159 +55,227 @@
 </head>
 
 <body>
-    <div class="wrapper">
-        <div class="main-content">
-            <!-- Header -->
-            <header class="header">
-                <div class="container">
-                    <a href="/" class="logo-link hide-text">CodeBor</a>
-                    <ul class="social-list list-unstyled">
-                        <li class="social-item ">
-                            <a href="https://vk.com/yuzbor" target="_blank" class="social-link vk hide-text">
-                                Я в VKontakte
+<div class="wrapper">
+    <div class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="container">
+                <a href="/" class="logo-link hide-text">CodeBor</a>
+                <ul class="social-list list-unstyled">
+                    <li class="social-item ">
+                        <a href="https://vk.com/yuzbor" target="_blank" class="social-link vk hide-text">
+                            Я в VKontakte
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://www.facebook.com/boris.yuzhakov" target="_blank"
+                           class="social-link fb hide-text">
+                            Я на FaceBook
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://twitter.com/yuzbor" target="_blank" class="social-link tw hide-text">
+                            Я на Twitter
+                        </a>
+                    </li>
+                    <li class="social-item">
+                        <a href="https://github.com/borlss" target="_blank" class="social-link git hide-text">
+                            Я на GitHub
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!--        <div class="br"></div>-->
+        </header>
+        <!-- / Header -->
+
+        <!-- Container -->
+        <div class="container clearfix">
+            <!-- Left Menu -->
+            <aside class="sidebar">
+                <!-- Navigation -->
+                <nav class="nav">
+                    <ul class="nav-list list-unstyled">
+                        <li class="nav-item aboutme">
+                            <a class="nav-link" href="index.html">Обо мне</a>
+                        </li>
+                        <li class="nav-item projectme active">
+                            <a class="nav-link" href="project.html">Мои работы</a>
+                        </li>
+                        <li class="nav-item contactme">
+                            <a class="nav-link" href="feedback.html">Связаться со мной</a>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- / Navigation -->
+                <!-- Contacts -->
+                <address class="contact">
+                    <div class="contact-header">
+                        <span class="header-inner-text">Контакты</span>
+                    </div>
+                    <ul class="contact-list list-unstyled">
+                        <li class="contact-item mail">
+                            <a class="contact-link" href="#yuzhakov.boris@gmail.com">
+                                <span class="contact-text">yuzhakov.boris@gmail.com</span>
+
                             </a>
                         </li>
-                        <li class="social-item">
-                            <a href="https://www.facebook.com/boris.yuzhakov" target="_blank" class="social-link fb hide-text">
-                                Я на FaceBook
+                        <li class="contact-item phone">
+                            <a class="contact-link" href="tel:+79251234567">
+                                <span class="contact-text">+7(925)123-45-67</span>
                             </a>
                         </li>
-                        <li class="social-item">
-                            <a href="https://twitter.com/yuzbor" target="_blank" class="social-link tw hide-text">
-                                Я на Twitter
-                            </a>
-                        </li>
-                        <li class="social-item">
-                            <a href="https://github.com/borlss" target="_blank" class="social-link git hide-text">
-                                Я на GitHub
+                        <li class="contact-item skype">
+                            <a class="contact-link" href="skype:skypelogin">
+                                <span class="contact-text">skypelogin</span>
                             </a>
                         </li>
                     </ul>
-                </div>
-                <!--        <div class="br"></div>-->
-            </header>
-            <!-- / Header -->
+                </address>
+                <!-- / Contacts -->
+            </aside>
+            <!-- / Left Menu -->
 
-            <!-- Container -->
-            <div class="container clearfix">
-                <!-- Left Menu -->
-                <aside class="sidebar">
-                    <!-- Navigation -->
-                    <nav class="nav">
-                        <ul class="nav-list list-unstyled">
-                            <li class="nav-item aboutme">
-                                <a class="nav-link" href="index.html">Обо мне</a>
+            <!-- Variable Content -->
+            <div class="variable-content">
+                <!-- My projects -->
+                <section class="aboutbox">
+                    <div class="aboutbox-header">Мои работы</div>
+                    <div class="aboutbox-body">
+                        <ul class="project-list list-unstyled clearfix">
+                            <li class="project-item">
+                                <div class="project-image project1">
+                                    <div class="project-name-bg">
+                                        <div><span class="project-name-text">Название</span></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="project-link">www.site.ru</a>
+
+                                <div class="project-description">Информация о проекте 1 превью 2 строки....</div>
                             </li>
-                            <li class="nav-item projectme active">
-                                <a class="nav-link" href="project.html">Мои работы</a>
+                            <li class="project-item">
+                                <div class="project-image project2">
+                                    <div class="project-name-bg">
+                                        <div><span class="project-name-text">Название</span></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="project-link">www.site.ru</a>
+
+                                <div class="project-description">Информация о проекте 2 превью 2 строки....</div>
                             </li>
-                            <li class="nav-item contactme">
-                                <a class="nav-link" href="feedback.html">Связаться со мной</a>
+                            <li class="project-item">
+                                <div class="project-image project3">
+                                    <div class="project-name-bg">
+                                        <div><span class="project-name-text">Название</span></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="project-link">www.site.ru</a>
+
+                                <div class="project-description">Информация о проекте 3 превью 2 строки....</div>
+                            </li>
+                            <li class="project-item">
+                                <div class="project-image project4">
+                                    <div class="project-name-bg">
+                                        <div><span class="project-name-text">Название</span></div>
+                                    </div>
+                                </div>
+                                <a href="#" class="project-link">www.site.ru</a>
+
+                                <div class="project-description">Информация о проекте 4 превью 2 строки....</div>
+                            </li>
+                            <li class="project-item">
+                                <div class="project-image project-append">
+                                    <div class="project-append-wrapper">
+                                        <div class="project-append-icon"></div>
+                                        Добавить проект
+                                    </div>
+
+                                </div>
                             </li>
                         </ul>
-                    </nav>
-                    <!-- / Navigation -->
-                    <!-- Contacts -->
-                    <address class="contact">
-                        <div class="contact-header">
-                            <span class="header-inner-text">Контакты</span>
-                        </div>
-                        <ul class="contact-list list-unstyled">
-                            <li class="contact-item mail">
-                                <a class="contact-link" href="#yuzhakov.boris@gmail.com">
-                                    <span class="contact-text">yuzhakov.boris@gmail.com</span>
-                                    
-                                </a>
-                            </li>
-                            <li class="contact-item phone">
-                                <a class="contact-link" href="tel:+79251234567">
-                                    <span class="contact-text">+7(925)123-45-67</span>
-                                </a>
-                            </li>
-                            <li class="contact-item skype">
-                                <a class="contact-link" href="skype:skypelogin">
-                                    <span class="contact-text">skypelogin</span>
-                                </a>
-                            </li>
-                        </ul>
-                    </address>
-                    <!-- / Contacts -->
-                </aside>
-                <!-- / Left Menu -->
-
-                <!-- Variable Content -->
-                <div class="variable-content">
-                    <!-- My projects -->
-                    <section class="aboutbox">
-                        <div class="aboutbox-header">Мои работы</div>
-                        <div class="aboutbox-body">
-                            <ul class="project-list list-unstyled clearfix">
-                                <li class="project-item">
-                                    <div class="project-image project1">
-                                        <div class="project-name-bg">
-                                           <div><span class="project-name-text">Название</span></div>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="project-link">www.site.ru</a>
-                                    <div class="project-description">Информация о проекте 1 превью 2 строки....</div>
-                                </li>
-                                <li class="project-item">
-                                    <div class="project-image project2">
-                                        <div class="project-name-bg">
-                                           <div><span class="project-name-text">Название</span></div>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="project-link">www.site.ru</a>
-                                    <div class="project-description">Информация о проекте 2 превью 2 строки....</div>
-                                </li>
-                                <li class="project-item">
-                                    <div class="project-image project3">
-                                        <div class="project-name-bg">
-                                           <div><span class="project-name-text">Название</span></div>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="project-link">www.site.ru</a>
-                                    <div class="project-description">Информация о проекте 3 превью 2 строки....</div>
-                                </li>
-                                <li class="project-item">
-                                    <div class="project-image project4">
-                                        <div class="project-name-bg">
-                                           <div><span class="project-name-text">Название</span></div>
-                                        </div>
-                                    </div>
-                                    <a href="#" class="project-link">www.site.ru</a>
-                                    <div class="project-description">Информация о проекте 4 превью 2 строки....</div>
-                                </li>
-                                <li class="project-item">
-                                    <div class="project-image project-append">
-                                        <div class="project-append-wrapper">
-                                            <div class="project-append-icon"></div>
-                                            Добавить проект
-                                        </div>
-
-                                    </div>
-                                </li>
-                            </ul>
-                        </div>
-                    </section>
-                    <!-- / My projects -->
-                </div>
-                <!-- /Variable Content -->
+                    </div>
+                </section>
+                <!-- / My projects -->
             </div>
-            <!-- Container -->
+            <!-- /Variable Content -->
+        </div>
+        <!-- Container -->
+    </div>
+</div>
+<footer class="footer">
+    <div class="container">
+        <div class="footer-wrapper">
+            <div class="lock">
+                <a href="#login" class="lock-inner">Войти</a>
+            </div>
+
+            <div class="copyright">&copy; Это сайт Южакова Бориса. Пожалуйста, не используйте материалы этого сайта без
+                разрешения автора.
+            </div>
         </div>
     </div>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-wrapper">
-                <div class="lock">
-                    <a href="#login" class="lock-inner">Войти</a>
-                </div>
-                
-                <div class="copyright">&copy; Это сайт Южакова Бориса. Пожалуйста, не используйте материалы этого сайта без разрешения автора.</div>
-            </div>
+</footer>
+
+<div class="overlay">
+    <div class="cb-modal">
+        <div class="modal-header">
+            Добавление проекта
+            <span class="icon-close"></span>
         </div>
-    </footer>
+
+        <div class="modal-body">
+            <form action="#">
+                <div class="form-box">
+                    <div class="form form-red form-error">
+                        <span class="close">&times;</span>
+                        <span class="error-title">Ошибка!</span>
+                        <span class="error-message">Невозможно добавить проект.</span>
+                    </div>
+                </div>
+                <div class="form-box tooltip-left form-required">
+                    <div class="form-label">Название проекта</div>
+                    <div class="form-field">
+                        <span class="arrow-box">Введите название</span>
+                        <input class="form form-blue" type="text" name="name"
+                               placeholder="Название проекта">
+                    </div>
+                </div>
+                <div class="form-box tooltip-left form-required">
+                    <div class="form-label">Картинка проекта</div>
+                    <div class="form-field">
+                        <span class="arrow-box">Изображение</span>
+                        <input class="form form-blue" type="text" name="image"
+                               placeholder="Загрузите изображение" readonly="">
+                        <input class="modal-input-file" type="file">
+
+                        <div class="modal-input-file-icon"></div>
+                    </div>
+                </div>
+                <div class="form-box tooltip-left form-required">
+                    <div class="form-label">URL проекта</div>
+                    <div class="form-field">
+                        <span class="arrow-box">Ссылка на проект</span>
+                        <input class="form form-blue" type="text" name="url"
+                               placeholder="Добавьте ссылку">
+                    </div>
+                </div>
+                <div class="form-box tooltip-left form-required">
+                    <div class="form-label">Описание</div>
+                    <div class="form-field">
+                        <span class="arrow-box">Описание проекта</span>
+                        <textarea class="form form-blue" name="description" cols="20" rows="4"
+                                  placeholder="Пара слов о Вашем проекте"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-box form-field form-center">
+                    <input type="submit" class="btn btn-lightblue" value="Добавить">
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
 </body>
 
 </html>
