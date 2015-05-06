@@ -64,3 +64,4 @@ textarea:focus, input:focus{
 .disable-hover * {
   pointer-events: none !important;
 }
+

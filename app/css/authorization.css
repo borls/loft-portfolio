@@ -1,0 +1,51 @@
+.main-content {
+    padding: 30px;
+}
+
+.container {
+    max-width: 590px;
+}
+.aboutbox {
+    /* Чтобы подсказки вылезали за пределы бокса */
+    overflow: visible;
+}
+
+.authorization-header {
+    height: 107px;
+    background-color: #48cbe8;
+    border-bottom: 15px solid #67dffa;
+    font: 300 40px/95px fira_sanslight;
+    color: white;
+    text-align: center;
+    border-radius: 5px 5px 0 0;
+}
+
+.form-body {
+    padding: 15px 81px 17px 66px;
+}
+
+.form-wrapper {
+    padding-bottom: 24px;
+}
+
+.form-label {
+    font-size: 36px;
+    text-align: center;
+}
+
+.form {
+    font-size: 17px;
+    padding: 18px;
+}
+
+.arrow-box {
+    font-size: 15px;
+}
+
+.form-center {
+    text-align: center;
+}
+.btn-enter {
+    min-width: 224px;
+    font: 300 36px/42px fira_sanslight;
+}
