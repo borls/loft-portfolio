@@ -1,9 +1,9 @@
 .project-item {
-    float: left;
+    display: inline-block;
+    vertical-align: top;
     margin: 7px;
     text-align: center;
     width: 181px;
-    height: 240px;
 }
 
 .project-image {
