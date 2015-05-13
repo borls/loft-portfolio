@@ -8,29 +8,35 @@ var modal = (function () {
 
     // Слушатель событий
     var _setUpListeners = function () {
-        $('form').on('click touchstart', '.form-error.close, .form-success.close', _removeInfoBox);
+        $('form').on('click touchstart', '.server-message.close', _removeServerMessage);
             //.on('keydown', 'input, textarea', _removeError)
             //.on('change', '#load_image', _removeError);
         $('.modal').on('click', '.icon-close', hide);
+
+        // добавление файла
+        $('.modal-input-file').change(_getFileName);
     };
 
-    // Убрать индикаторы ошибки
-    function _removeInfoBox(event) {
-        console.log('Убираем индикаторы ошибки');
+    // Убрать серверные сообщения
+    function _removeServerMessage(event) {
 
         event.preventDefault();
 
-        //$(this).parents('.form-info').hide();
+        $(this).parents('.server-message').hide();
+    }
 
-        var boxError = $(this).parents('.form-error');
-        var boxSuccess = $(this).parents('.form-success');
+    // Функция вывода имя прикрепленого файла
+    function _getFileName(event) {
 
-        if (boxError.length) {
-            boxError.hide();
-        } else if (boxSuccess.length) {
-            boxSuccess.hide();
-            //...
-        }
+        var path = event.target.value;
+        var title = event.target.title;
+        var $file = $('#load_image');
+        if (!path) return $file.val(title);
+
+        var i = path.lastIndexOf('\\') + 1;
+        var filename = path.slice(i);
+
+        $file.val(filename);
     }
 
     var show = function (name) {
@@ -42,7 +48,6 @@ var modal = (function () {
             $('.modal[data-name="' + name + '"]').hide();
         } else {
             // name - ie.Event object
-            // console.log(name);
             $('.modal').hide();
         }
     };
