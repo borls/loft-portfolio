@@ -1,41 +1,12 @@
 .logo-link {
-    position: absolute;    
-    display:block;
+    position: absolute;
+    display: block;
     width: 119px;
     height: 100%;
-    background: url(/img/logo.png) no-repeat;
-    background-size: contain;
+    /*background: url(/img/logo.png) no-repeat;*/
+    /*background-size: contain;*/
     opacity: 0.7;
-}
 
-
-/*
-.logo-text {
-    position: absolute;
-    left: -9999px;
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/logo.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/logo.png', sizingMethod='scale')";
 }
-*/
-
-/*
-.logo {
-    float: left;
-}
-
-.icon-logo {
-    padding: 0 0 0 105px;
-}
-
-.icon-logo:before {
-    content: '';
-    position: absolute;
-    width: 60px;
-    height: 60px;
-    margin-left: -75px;
-    background: url(/img/logo-bower.png) no-repeat;
-    background-size: contain;
-}
-
-.text-logo {
-    font: 500 30px fira_sansbook;
-}
-*/

@@ -236,22 +236,20 @@
     </div>
 </footer>
 
+<!-- vendor JS -->
 <script src="bower/jquery/dist/jquery.js"></script>
 <script src="js/vendor/jquery.min.js"></script>
 <!--[if lt IE 9]>
 <script src="js/vendor/respond.js"></script>
 <script>
     // fix IE8
-    $(".porfolio-item:nth-child(3n)").css("margin-right", "0");
-    $('.porfolio-img-hover').hide();
-    $('.porfolio-item').hover(function() {
-        $(this).find('.porfolio-img-hover').show();
-    }, function() {
-        $(this).find('.porfolio-img-hover').hide();
-    });
+    // исправление отсутствие :last-child
+    // .nav-item:last-child {border-bottom: none;}
+    $('.nav-item').last().css('border-bottom', 'none')
 </script>
-<script src="js/vendor/placeholders.js"></script>
 <![endif]-->
+
+<!-- JS -->
 <script src="js/plugins.js"></script>
 <script src="js/main.js"></script>
 <script src="js/modal.js"></script>

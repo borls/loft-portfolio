@@ -240,6 +240,25 @@
             </div>
         </div>
     </footer>
+
+    <!-- vendor JS -->
+    <script src="bower/jquery/dist/jquery.js"></script>
+    <script src="js/vendor/jquery.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/vendor/respond.js"></script>
+    <script>
+        // fix IE8
+        // исправление отсутствие :last-child
+        // .nav-item:last-child {border-bottom: none;}
+        $('.nav-item').last().css('border-bottom', 'none')
+    </script>
+    <![endif]-->
+
+    <!-- JS -->
+    <script src="js/plugins.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/modal.js"></script>
+    <script src="js/validation.js"></script>
 </body>
 
 </html>
