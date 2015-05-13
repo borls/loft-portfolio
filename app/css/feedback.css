@@ -13,11 +13,11 @@
     border-radius: 5px 5px 0 0;
 }
 
-.form-body {
+.field-body {
     padding: 39px 124px 202px 106px;
 }
 
-.form-wrapper {
+.field-wrapper {
     padding-bottom: 24px;
 }
 .capcha {

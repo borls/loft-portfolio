@@ -47,10 +47,16 @@
     <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/feedback.css">
     <!-- js -->
-    <script src="bower/jquery/dist/jquery.js"></script>
-    <!-- <script srd="bower/modernizr.js"></script> -->
-    <script src="js/main.js"></script>
-    <script src="js/plugins.js"></script>
+    <script src="js/vendor/modernizr.min.js"></script>
+    <!--&lt;!&ndash;[if lt IE 9]>-->
+    <!--<script src="js/vendor/placeholders.min.js"></script>-->
+    <!--<script src="js/vendor/respond.js"></script>-->
+    <!--<![endif]&ndash;&gt;-->
+
+    <!--<script src="bower/jquery/dist/jquery.js"></script>-->
+    <!--&lt;!&ndash; <script srd="bower/modernizr.js"></script> &ndash;&gt;-->
+    <!--<script src="js/main.js"></script>-->
+    <!--<script src="js/plugins.js"></script>-->
 </head>
 
 <body>
@@ -140,53 +146,53 @@
                 <section class="aboutbox">
                     <div class="feedback-header">У вас интересный проект? Напишите мне</div>
 
-                    <div class="form-body">
-                        <form action="" method="post">  <!-- php/feedback.php -->
-                            <div class="form-wrapper">
+                    <div class="field-body">
+                        <form class="form" name="feedback">  <!--  action="" method="post">  php/feedback.php -->
+                            <div class="field-wrapper">
                                 <div class="clearfix">
                                     <!-- Name Input -->
-                                    <div class="form-box tooltip-left col-6 form-required">
-                                        <div class="form-label">Имя</div>
-                                        <div class="form-field">
+                                    <div class="field-box tooltip-left col-6 field-required">
+                                        <div class="field-label">Имя</div>
+                                        <div class="field-field">
                                             <span class="arrow-box">Вы не ввели имя</span>
-                                            <input class="form form-blue" type="text" name="name"
+                                            <input class="field field-blue" type="text" name="name"
                                                    placeholder="Как к Вам обращаться">
                                         </div>
                                     </div>
 
                                     <!-- Email Input -->
-                                    <div class="form-box tooltip-right col-6 form-required">
-                                        <div class="form-label">Email</div>
-                                        <div class="form-field">
+                                    <div class="field-box tooltip-right col-6 field-required">
+                                        <div class="field-label">Email</div>
+                                        <div class="field-field">
                                             <span class="arrow-box">Вы не ввели Email</span>
-                                            <input class="form form-blue" type="text" name="email"
+                                            <input class="field field-blue" type="text" name="email"
                                                    placeholder="Куда мне писать">
                                         </div>
                                     </div>
                                 </div>
 
                                 <!-- Message TextArea -->
-                                <div class="form-box tooltip-left form-required">
-                                    <div class="form-label">Сообщение</div>
-                                    <div class="form-field">
+                                <div class="field-box tooltip-left field-required">
+                                    <div class="field-label">Сообщение</div>
+                                    <div class="field-field">
                                         <span class="arrow-box">Ваш вопрос</span>
-                                    <textarea class="form form-blue" name="message" id="" cols="30" rows="8"
+                                    <textarea class="field field-blue" name="message" id="" cols="30" rows="8"
                                               placeholder="Кратко в чем суть"></textarea>
                                     </div>
                                 </div>
 
                                 <!-- Capcha -->
-                                <div class="form-box clearfix">
-                                    <div class="form-label">Введите код, указанный на картинке</div>
+                                <div class="field-box clearfix">
+                                    <div class="field-label">Введите код, указанный на картинке</div>
 
                                     <div class="col-6">
-                                        <div class="form form-blue capcha">E0Ed3</div>
+                                        <div class="field field-blue capcha">E0Ed3</div>
                                     </div>
 
-                                    <div class="form-box tooltip-right col-6 form-required" style="margin-top: 20px;">
-                                        <div class="form-field">
+                                    <div class="field-box tooltip-right col-6 field-required" style="margin-top: 20px;">
+                                        <div class="field-field">
                                             <span class="arrow-box">Вы не ввели код</span>
-                                            <input class="form form-blue" type="text" name="capcha"
+                                            <input class="field field-blue" type="text" name="capcha"
                                                    placeholder="Введите код">
                                         </div>
                                     </div>
@@ -194,14 +200,14 @@
                             </div>
 
                             <!-- Buttons -->
-                            <div class="form-box clearfix">
+                            <div class="field-box clearfix">
                                 <div class="col-6">
-                                    <div class="form-field">
+                                    <div class="field-field">
                                         <input type="submit" class="btn btn-lightblue" value="Отправить">
                                     </div>
                                 </div>
-                                <div class="form-right col-6">
-                                    <div class="form-field">
+                                <div class="field-right col-6">
+                                    <div class="field-field">
                                         <input type="reset" class="btn btn-grayblue" value="Очистить">
                                     </div>
                                 </div>
@@ -229,6 +235,28 @@
         </div>
     </div>
 </footer>
+
+<script src="bower/jquery/dist/jquery.js"></script>
+<script src="js/vendor/jquery.min.js"></script>
+<!--[if lt IE 9]>
+<script src="js/vendor/respond.js"></script>
+<script>
+    // fix IE8
+    $(".porfolio-item:nth-child(3n)").css("margin-right", "0");
+    $('.porfolio-img-hover').hide();
+    $('.porfolio-item').hover(function() {
+        $(this).find('.porfolio-img-hover').show();
+    }, function() {
+        $(this).find('.porfolio-img-hover').hide();
+    });
+</script>
+<script src="js/vendor/placeholders.js"></script>
+<![endif]-->
+<script src="js/plugins.js"></script>
+<script src="js/main.js"></script>
+<script src="js/modal.js"></script>
+<script src="js/validation.js"></script>
+<script src="js/feedback.js"></script>
 </body>
 
 </html>

@@ -46,6 +46,12 @@
     <!-- page css -->
     <link rel="stylesheet" href="css/about_me.css">
     <!-- js -->
+    <script src="js/vendor/modernizr.min.js"></script>
+    <!--[if lt IE 9]>
+    <script src="js/vendor/placeholders.min.js"></script>
+    <script src="js/vendor/respond.js"></script>
+    <![endif]-->
+
     <script src="bower/jquery/dist/jquery.js"></script>
     <!-- <script srd="bower/modernizr.js"></script> -->
     <script src="js/main.js"></script>
@@ -53,12 +59,19 @@
 </head>
 
 <body>
+    <!--[if lt IE 7]>
+    <p class="browsehappy">Ваш браузер <strong>устарел</strong>.
+        Пожалуйста<a href="http://browsehappy.com/">обновите</a> его.</p>
+    <![endif]-->
     <div class="wrapper">
         <div class="main-content">
             <!-- Header -->
             <header class="header">
                 <div class="container">
                     <a href="/" class="logo-link hide-text">CodeBor</a>
+                    <div class="btn-menu">
+                        <div class="sandwich"></div>
+                    </div>
                     <ul class="social-list list-unstyled">
                         <li class="social-item ">
                             <a href="https://vk.com/yuzbor" target="_blank" class="social-link vk hide-text">

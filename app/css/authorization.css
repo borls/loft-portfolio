@@ -20,15 +20,15 @@
     border-radius: 5px 5px 0 0;
 }
 
-.form-body {
+.field-body {
     padding: 15px 81px 17px 66px;
 }
 
-.form-wrapper {
+.field-wrapper {
     padding-bottom: 24px;
 }
 
-.form-label {
+.field-label {
     font-size: 36px;
     text-align: center;
 }
@@ -42,7 +42,7 @@
     font-size: 15px;
 }
 
-.form-center {
+.field-center {
     text-align: center;
 }
 .btn-enter {

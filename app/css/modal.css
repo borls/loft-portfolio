@@ -12,25 +12,27 @@
     font-size: 17px;
 }
 
-.overlay {
+.modal {
     display: none;
-    background: rgba(88, 105, 122, 0.7);
+    background: rgba(0, 0, 0, 0.7);
     /* фиксируем, растягиваем на весь доступный экран */
     position: fixed;
     top: 0;
     right: 0;
     bottom: 0;
     left: 0;
-    z-index: 50;
+    z-index: 9998;
 
     /* если в модальном окне много содержимого, показываем скроллбар */
     overflow: auto;
 
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#7F000000,endColorstr=#7F000000); /* IE6–IE8 */
     /*zoom: 1;*/
+    cursor: pointer;
 }
 
-.cb-modal {
+
+.modal-wrapper {
     background: #eff3f7;
     border-radius: 4px;
     position: relative;
@@ -40,6 +42,7 @@
     right: 0;
     margin: auto;
     width: 362px;
+    cursor: auto;
 }
 
 .modal-header {
@@ -55,13 +58,13 @@
 
 .icon-close {
     background: url(/img/close.png) no-repeat 0 0;
-    cursor: pointer;
     height: 25px;
     width: 25px;
     position: relative;
     float: right;
     top: 3px;
     right: 12px;
+    cursor: pointer;
 }
 
 .close {
@@ -93,11 +96,11 @@
 .modal-input-file-icon {
     background: #48cbe8 url(/img/open-file.png) center center no-repeat;
     cursor: pointer;
-    border-radius: 0 4px 4px 0;
-    height: 40px;
+    border-radius: 0 2px 2px 0;
+    height: 39px;
     position: absolute;
-    right: 0;
-    top: 0;
+    right: 1px;
+    top: 1px;
     width: 52px;
 }
 

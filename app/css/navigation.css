@@ -1,4 +1,4 @@
- /* Left Menu */
+/* Left Menu */
 .sidebar {
     float: left;
     width: 250px;
@@ -46,15 +46,15 @@
     color: #959aa8;
     font: 300 20px fira_sanslight;
 }
-   
+
 .nav .nav-link:hover {
     color: #3ba8c0;
 }
-       
+
 .nav .nav-link:hover {
     color: #3ba8c0;
 }
-    
+
 .nav .nav-item.active .nav-link {
     color: #f9fafb;
 }
@@ -70,4 +70,63 @@
     margin-top: -70px;
     width: 230px;
     height: 70px;
+}
+*/
+
+/* Sandwich button*/
+.btn-menu {
+    position: relative;
+    display: none;
+    float: right;
+    width: 25px;
+    height: 21px;
+    margin: 45px 50px 45px 45px;
+    cursor: pointer;
+}
+
+.btn-menu .sandwich {
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+
+.btn-menu .sandwich,
+.btn-menu .sandwich:before,
+.btn-menu .sandwich:after {
+    content: '';
+    position: absolute;
+    display: block;
+    background: #58697a;
+    height: 5px;
+    width: 35px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn-menu .sandwich:before {
+    top: -10px;
+}
+
+.btn-menu .sandwich:after {
+    bottom: -10px;
+}
+
+.btn-menu .sandwich, .btn-menu .sandwich:before, .btn-menu .sandwich:after {
+    transition: all 200ms ease-in-out;
+}
+
+.btn-menu.active .sandwich {
+    background-color: transparent;
+}
+
+.btn-menu.active .sandwich:before, .btn-menu.active .sandwich:after {
+    top: 0;
+}
+
+.btn-menu.active .sandwich:before {
+    transform: rotate(45deg);
+}
+
+.btn-menu.active .sandwich:after {
+    transform: rotate(-45deg);
 }

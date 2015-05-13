@@ -2,16 +2,16 @@
     box-sizing: border-box;
 }
 
-.form-field {
+.field-field {
     position: relative;
 }
 
-.form-label {
+.field-label {
     color: #959aa8;
     font: 300 19px fira_sanslight;
 }
 
-.form {
+.field {
     font: 300 13px fira_sanslight;
     padding: 9px;
     border: 1px solid #ccc;
@@ -19,61 +19,77 @@
     width: 100%;
 }
 
-textarea.form {
+textarea.field {
     resize: none;
 }
 
-.form-box {
+.field-box {
     padding: 0 0 9px 18px;
 }
 
 
-.form-blue {
+.field-blue {
     color: #48cbe8;
     border-color: #48cbe8;
 }
 
-.form-blue::-webkit-input-placeholder {
+.field-blue::-webkit-input-placeholder {
     color: #48cbe8;
     text-overflow: ellipsis;
 }
 
-.form-blue::-moz-placeholder {
+.field-blue::-moz-placeholder {
     color: #48cbe8;
     text-overflow: ellipsis;
 }
 
-.form-blue:-ms-input-placeholder {
+.field-blue:-ms-input-placeholder {
     color: #48cbe8;
     text-overflow: ellipsis;
 }
 
-.form-blue::placeholder {
+.field-blue::placeholder {
     color: #48cbe8;
     text-overflow: ellipsis;
 }
 
-.form-blue:focus::-webkit-input-placeholder {
+.field-blue:focus::-webkit-input-placeholder {
     opacity: 0;
 }
 
-.form-blue:focus::-moz-placeholder {
+.field-blue:focus::-moz-placeholder {
     opacity: 0;
 }
 
-.form-blue:focus:-ms-input-placeholder {
+.field-blue:focus:-ms-input-placeholder {
     opacity: 0;
 }
 
-.form-blue:focus::placeholder {
+.field-blue:focus::placeholder {
     opacity: 0;
 }
 
-.form-red {
+.field-red {
     color: #959aa8;
     background: #fdd5d2;
     border-color: #f97e76;
     transition: all .2s ease-in-out;
+}
+
+.field-green {
+    color: #959aa8;
+    background: rgba(153, 247, 153, 0.40);
+    border-color: rgba(144, 238, 134, 0.76);
+    transition: all .2s ease-in-out;
+}
+
+.has-error > .field{
+    background-color: #fad2d1 !important;
+    border-color: #f97e76 !important;
+}
+
+.has-error > .arrow-box {
+    display: block;
 }
 
 .col-6 {
@@ -84,7 +100,7 @@ textarea.form {
 /* Error arrow box */
 
 .arrow-box {
-    /*display: none;*/
+    display: none;
     position: absolute;
     font: 300 13px/26px fira_sanslight;
     padding: 0 15px;
@@ -128,25 +144,35 @@ textarea.form {
     margin-top: -6px;
 }
 
-.form-right {
+.field-right {
     text-align: right!important;
 }
 
-.form-center {
+.field-center {
     text-align: center!important;
 }
 
 
-.form-error {
-    color: #f97e76;
+/* server message box */
+
+.server-message {
+    display: none;
     padding: 0 9px;
 }
 
-.form-error .error-title {
+.server-message .message-title {
     font-size: 25px;
     line-height: 1.4;
 }
 
-.form-error .error-message {
+.server-message .message-body {
     font-size: 15px;
+}
+
+.server-error {
+    color: #f97e76;
+}
+
+.server-success {
+    color: darkgreen;
 }
