@@ -1,145 +1,37 @@
+<?php
+session_start();
+require_once 'backend/authorization.php';
+
+$user = $auth->getUser();
+$file = basename(__FILE__);
+$info = pathinfo($file);
+$page = basename($file,'.'.$info['extension']);
+?>
 <!DOCTYPE html>
 <!--нужен для того, чтобы на скрин-ридерах хорошо отоброжался русский текст-->
 <html lang="ru-RU">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <title>portfolio:my projects</title>
-    <!-- seo -->
-    <meta name="description" content="Портфолио Южакова Бориса">
-    <meta name="keywords" content="Портфолио Южаков Борис">
-    <meta name="author" content="Южаков Борис">
-    <!-- favicon -->
-    <link rel="apple-touch-icon" sizes="57x57" href="favicon/apple-icon-57x57.png">
-    <link rel="apple-touch-icon" sizes="60x60" href="favicon/apple-icon-60x60.png">
-    <link rel="apple-touch-icon" sizes="72x72" href="favicon/apple-icon-72x72.png">
-    <link rel="apple-touch-icon" sizes="76x76" href="favicon/apple-icon-76x76.png">
-    <link rel="apple-touch-icon" sizes="114x114" href="favicon/apple-icon-114x114.png">
-    <link rel="apple-touch-icon" sizes="120x120" href="favicon/apple-icon-120x120.png">
-    <link rel="apple-touch-icon" sizes="144x144" href="favicon/apple-icon-144x144.png">
-    <link rel="apple-touch-icon" sizes="152x152" href="favicon/apple-icon-152x152.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-icon-180x180.png">
-    <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-icon-192x192.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="96x96" href="favicon/favicon-96x96.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
-    <link rel="manifest" href="favicon/manifest.json">
-    <meta name="msapplication-TileColor" content="#ffffff">
-    <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
-    <meta name="theme-color" content="#ffffff">
-    <!-- fonts css -->
-    <link rel="stylesheet" href="font/font.css">
-    <!-- vendor css -->
-    <link rel="stylesheet" href="bower/normalize.css/normalize.css">
-    <!-- common css -->
-    <link rel="stylesheet" href="css/common.css">
-    <link rel="stylesheet" href="css/buttons.css">
-    <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/social.css">
-    <link rel="stylesheet" href="css/logo.css">
-    <link rel="stylesheet" href="css/navigation.css">
-    <link rel="stylesheet" href="css/contact.css">
-    <link rel="stylesheet" href="css/auth.css">
-    <link rel="stylesheet" href="css/content.css">
-
-    <!-- page css -->
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/modal.css">
-    <link rel="stylesheet" href="css/project.css">
-    <!-- js -->
-    <script src="js/vendor/modernizr.min.js"></script>
-    <!--&lt;!&ndash;[if lt IE 9]>-->
-    <!--<script src="js/vendor/placeholders.min.js"></script>-->
-    <!--<script src="js/vendor/respond.js"></script>-->
-    <!--<![endif]&ndash;&gt;-->
-
-    <!--<script src="bower/jquery/dist/jquery.js"></script>-->
-    <!--&lt;!&ndash; <script srd="bower/modernizr.js"></script> &ndash;&gt;-->
-    <!--<script src="js/main.js"></script>-->
-    <!--<script src="js/plugins.js"></script>-->
+    <?php
+    $pageCssList = array(
+        'form' => 'css/form.css',
+        'modal' => 'css/modal.css',
+        'project' => 'css/project.css',
+        );
+    include('template/head.php')
+    ?>
 </head>
 
 <body>
 <div class="wrapper">
     <div class="main-content">
         <!-- Header -->
-        <header class="header">
-            <div class="container">
-                <a href="/" class="logo-link hide-text">CodeBor</a>
-                <ul class="social-list list-unstyled">
-                    <li class="social-item ">
-                        <a href="https://vk.com/yuzbor" target="_blank" class="social-link vk hide-text">
-                            Я в VKontakte
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="https://www.facebook.com/boris.yuzhakov" target="_blank"
-                           class="social-link fb hide-text">
-                            Я на FaceBook
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="https://twitter.com/yuzbor" target="_blank" class="social-link tw hide-text">
-                            Я на Twitter
-                        </a>
-                    </li>
-                    <li class="social-item">
-                        <a href="https://github.com/borlss" target="_blank" class="social-link git hide-text">
-                            Я на GitHub
-                        </a>
-                    </li>
-                </ul>
-            </div>
-            <!--        <div class="br"></div>-->
-        </header>
+        <?php include('template/header.php') ?>
         <!-- / Header -->
 
         <!-- Container -->
         <div class="container clearfix">
             <!-- Left Menu -->
-            <aside class="sidebar">
-                <!-- Navigation -->
-                <nav class="nav">
-                    <ul class="nav-list list-unstyled">
-                        <li class="nav-item aboutme">
-                            <a class="nav-link" href="index.html">Обо мне</a>
-                        </li>
-                        <li class="nav-item projectme active">
-                            <a class="nav-link" href="project.html">Мои работы</a>
-                        </li>
-                        <li class="nav-item contactme">
-                            <a class="nav-link" href="feedback.html">Связаться со мной</a>
-                        </li>
-                    </ul>
-                </nav>
-                <!-- / Navigation -->
-                <!-- Contacts -->
-                <address class="contact">
-                    <div class="contact-header">
-                        <span class="header-inner-text">Контакты</span>
-                    </div>
-                    <ul class="contact-list list-unstyled">
-                        <li class="contact-item mail">
-                            <a class="contact-link" href="#yuzhakov.boris@gmail.com">
-                                <span class="contact-text">yuzhakov.boris@gmail.com</span>
-
-                            </a>
-                        </li>
-                        <li class="contact-item phone">
-                            <a class="contact-link" href="tel:+79251234567">
-                                <span class="contact-text">+7(925)123-45-67</span>
-                            </a>
-                        </li>
-                        <li class="contact-item skype">
-                            <a class="contact-link" href="skype:skypelogin">
-                                <span class="contact-text">skypelogin</span>
-                            </a>
-                        </li>
-                    </ul>
-                </address>
-                <!-- / Contacts -->
-            </aside>
+            <?php include('template/sidebar.php') ?>
             <!-- / Left Menu -->
 
             <!-- Variable Content -->
@@ -208,19 +100,9 @@
         <!-- Container -->
     </div>
 </div>
-<footer class="footer">
-    <div class="container">
-        <div class="footer-wrapper">
-            <div class="lock">
-                <a href="authorization.html" class="lock-inner">Войти</a>
-            </div>
-
-            <div class="copyright">&copy; Это сайт Южакова Бориса. Пожалуйста, не используйте материалы этого сайта без
-                разрешения автора.
-            </div>
-        </div>
-    </div>
-</footer>
+<!-- Footer -->
+<?php include('template/footer.php') ?>
+<!-- / Footer -->
 
 <div class="modal" data-name="project-append">
     <div class="modal-wrapper">
