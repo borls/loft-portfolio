@@ -12,3 +12,11 @@ node_modules
 
 # bower modules
 app/bower
+
+# composer modules
+app/composer
+composer.lock
+composer.phar
+
+# others
+app/htaccess.md

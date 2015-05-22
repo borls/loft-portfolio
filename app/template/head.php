@@ -8,7 +8,7 @@
 <!-- favicon -->
 <?php include('favicon.php') ?>
 <!-- fonts css -->
-<link rel="stylesheet" href="font/font.css">
+<link rel="stylesheet" href="css/font/font.css">
 <!-- vendor css -->
 <link rel="stylesheet" href="bower/normalize.css/normalize.css">
 <!-- common css -->

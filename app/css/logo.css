@@ -5,12 +5,12 @@
     height: 100%;
 
     /* If lt IE8 */
-    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/logo.png', sizingMethod='scale');
-    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/img/logo.png', sizingMethod='scale')";
+    filter: progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/logo.png', sizingMethod='scale');
+    -ms-filter: "progid:DXImageTransform.Microsoft.AlphaImageLoader(src='/images/logo.png', sizingMethod='scale')";
 }
 
 html.backgroundsize .logo-link {
-    background: url(/img/logo.png) no-repeat;
+    background: url(/images/logo.png) no-repeat;
     background-size: contain;
     opacity: 0.7;
 }

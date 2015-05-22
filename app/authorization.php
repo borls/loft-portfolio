@@ -1,3 +1,13 @@
+<?php
+session_start();
+require_once 'backend/auth/login.php';
+
+$user = $auth->getUser();
+$file = basename(__FILE__);
+$info = pathinfo($file);
+$page = basename($file, '.' . $info['extension']);
+?>
+
 <!DOCTYPE html>
 <!--нужен для того, чтобы на скрин-ридерах хорошо отоброжался русский текст-->
 <html lang="ru-RU">
@@ -7,7 +17,7 @@
         'form' => 'css/form.css',
         'authorization' => 'css/authorization.css',
     );
-    include('template/head.php')
+    include('template/head.php');
     ?>
 </head>
 <body>
@@ -20,7 +30,7 @@
                 <div class="authorization-header">Авторизируйтесь</div>
 
                 <div class="field-body">
-                    <form class="form" name="authorization">  <!-- action="" method="post" php/feedback.php -->
+                    <form class="form" name="authorization">  <!-- action="" method="post" backend/feedback.php -->
                         <div class="field-wrapper">
                             <div class="clearfix">
                                 <!-- Login Input -->
@@ -38,7 +48,7 @@
                                     <div class="field-label">Пароль</div>
                                     <div class="field-field">
                                         <span class="arrow-box">Введите пароль</span>
-                                        <input class="field field-blue" type="text" name="password"
+                                        <input class="field field-blue" type="password" name="password"
                                                placeholder="Введите пароль">
                                     </div>
                                 </div>

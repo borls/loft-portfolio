@@ -33,7 +33,7 @@
 }
 
 .contact .contact-item {
-    background: url(/img/sprite-contact.png) 20px center no-repeat;
+    background: url(/images/sprite-contact.png) 20px center no-repeat;
     /*background-position-x: -20px;*/
 }
 .contact .contact-item.mail {

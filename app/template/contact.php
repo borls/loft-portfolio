@@ -1,4 +1,3 @@
-<!-- Contacts -->
 <address class="contact">
     <div class="contact-header">
         <span class="header-inner-text">Контакты</span>
@@ -6,7 +5,7 @@
     <ul class="contact-list list-unstyled">
         <li class="contact-item mail">
             <a class="contact-link" href="mailto:yuzhakov.boris@gmail.com">
-                <span class="contact-text">yuzhakov.boris@gmail.com</span>
+                <span class="contact-text">codebor@mail.ru</span>
             </a>
         </li>
         <li class="contact-item phone">
@@ -21,4 +20,3 @@
         </li>
     </ul>
 </address>
-<!-- / Contacts -->

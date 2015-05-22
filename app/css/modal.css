@@ -57,7 +57,7 @@
 }
 
 .icon-close {
-    background: url(/img/close.png) no-repeat 0 0;
+    background: url(/images/close.png) no-repeat 0 0;
     height: 25px;
     width: 25px;
     position: relative;
@@ -97,7 +97,7 @@
 
 .modal-input-file-icon {
     position: absolute;
-    background: #48cbe8 url(/img/open-file.png) center center no-repeat;
+    background: #48cbe8 url(/images/open-file.png) center center no-repeat;
     cursor: pointer;
     border-radius: 0 2px 2px 0;
     height: 39px;

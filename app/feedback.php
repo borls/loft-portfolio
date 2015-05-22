@@ -1,11 +1,11 @@
 <?php
-session_start();
-require_once 'backend/authorization.php';
+    session_start();
+    require_once 'backend/authorization.php';
 
-$user = $auth->getUser();
-$file = basename(__FILE__);
-$info = pathinfo($file);
-$page = basename($file,'.'.$info['extension']);
+    $user = $auth->getUser();
+    $file = basename(__FILE__);
+    $info = pathinfo($file);
+    $page = basename($file, '.' . $info['extension']);
 ?>
 <!DOCTYPE html>
 <!--нужен для того, чтобы на скрин-ридерах хорошо отоброжался русский текст-->
@@ -19,6 +19,7 @@ $page = basename($file,'.'.$info['extension']);
     );
     include('template/head.php')
     ?>
+    <script src='https://www.google.com/recaptcha/api.js'></script>
 </head>
 
 <body>
@@ -40,7 +41,7 @@ $page = basename($file,'.'.$info['extension']);
                     <div class="feedback-header">У вас интересный проект? Напишите мне</div>
 
                     <div class="field-body">
-                        <form class="form" name="feedback">  <!--  action="" method="post">  php/feedback.php -->
+                        <form class="form" name="feedback" action="backend/feedback.php" method="post"><!-- enctype="multipart/form=data" method="post">-->
                             <div class="field-wrapper">
                                 <div class="clearfix">
                                     <!-- Name Input -->
@@ -58,7 +59,7 @@ $page = basename($file,'.'.$info['extension']);
                                         <div class="field-label">Email</div>
                                         <div class="field-field">
                                             <span class="arrow-box">Вы не ввели Email</span>
-                                            <input class="field field-blue" type="text" name="email"
+                                            <input class="field field-blue" type="email" name="email"
                                                    placeholder="Куда мне писать">
                                         </div>
                                     </div>
@@ -74,19 +75,13 @@ $page = basename($file,'.'.$info['extension']);
                                     </div>
                                 </div>
 
-                                <!-- Capcha -->
+                                <!-- Captcha -->
                                 <div class="field-box clearfix">
                                     <div class="field-label">Введите код, указанный на картинке</div>
-
-                                    <div class="col-6">
-                                        <div class="field field-blue capcha">E0Ed3</div>
-                                    </div>
-
                                     <div class="field-box tooltip-right col-6 field-required" style="margin-top: 20px;">
                                         <div class="field-field">
                                             <span class="arrow-box">Вы не ввели код</span>
-                                            <input class="field field-blue" type="text" name="capcha"
-                                                   placeholder="Введите код">
+                                            <div class="g-recaptcha" data-sitekey="6Le49wYTAAAAAOF2yXK91DOjY9RHcPLHwOYRtyjj"></div>
                                         </div>
                                     </div>
                                 </div>
@@ -105,7 +100,6 @@ $page = basename($file,'.'.$info['extension']);
                                     </div>
                                 </div>
                             </div>
-
                         </form>
                     </div>
                 </section>

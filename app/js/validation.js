@@ -31,7 +31,6 @@ var validation = (function () {
                 $element.parent().addClass('has-error');
                 valid = false;
             }
-
         }); // each
 
         return valid;

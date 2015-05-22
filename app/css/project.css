@@ -69,19 +69,19 @@
 }
 
 .project1 {
-    background-image: url(/img/projects/p1.png);
+    background-image: url(/images/projects/p1.png);
 }
 
 .project2 {
-    background-image: url(/img/projects/p2.png);
+    background-image: url(/images/projects/p2.png);
 }
 
 .project3 {
-    background-image: url(/img/projects/p3.png);
+    background-image: url(/images/projects/p3.png);
 }
 
 .project4 {
-    background-image: url(/img/projects/p4.png);
+    background-image: url(/images/projects/p4.png);
 }
 
 .project-append {
@@ -103,5 +103,5 @@
     margin: auto;
     width: 32px;
     height: 32px;
-    background-image: url(/img/projects/icon-project-append.png);
+    background-image: url(/images/projects/icon-project-append.png);
 }

@@ -1,0 +1,10 @@
+{
+  "require": {
+    "phpmailer/phpmailer": "dev-master",
+    "smarty/smarty": "3.1.*@dev",
+    "smottt/wideimage": "dev-master"
+  },
+  "config": {
+    "vendor-dir": "app/composer"
+  }
+}

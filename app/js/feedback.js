@@ -1,23 +1,24 @@
-// Модуль связаться со мной
+// Модуль "связаться со мной"
 var feedback = (function () {
 
     var init = function () {
-        console.log('Инициализация модуля feedback');
-        _setUpListeners();
-    };
-    var _setUpListeners = function () {
-        $('.form[name="feedback"]').on('submit', _submitForm); // отправка формы "связаться со мной"
-    };
-    var _submitForm = function (event) {
+            console.log('Инициализация модуля feedback');
+            _setUpListeners();
+        },
+        _setUpListeners = function () {
+            $('.form[name="feedback"]').on('submit', _submitForm); // отправка формы "связаться со мной"
+        },
+        _submitForm = function (event) {
             console.log('Работаем с формой связи');
 
+            // отменяем родной сабмит
             event.preventDefault();
 
             var $form = $(this);
-            var url = '/php/feedback.php';
+            var url = 'backend/feedback.php';
             var defObject = _ajaxForm($form, url);
 
-            if (defObject) {
+            if (typeof defObject === 'object') {
                 defObject.done(function (response) {
                     var message = response.message;
                     var status = response.status;
@@ -33,24 +34,32 @@ var feedback = (function () {
         },
         _ajaxForm = function ($form, url) {
 
-            if (!validation.validateForm($form)) return false;  // Возвращает false, если не проходит валидацию
-            var data = $form.serialize(); // собираем данные из формы в объект data
+            // Возвращает false, если не проходит валидацию
+            // html5 required - не работает в IE8
+            //if (!validation.validateForm($form)) return false;
+
+            // собираем данные из формы в объект data
+            var data = $form.serialize();
 
             return $.ajax({ // Возвращает Deferred Object
-                type: 'POST',
-                url: url,
-                dataType: 'JSON',
+                type: 'post',
+                url: '/backend/feedback.php',
+                //dataType: 'json',
                 data: data
+            }).done(function (response, textStatus, jqXHR){
+                // Log a message to the console
+                console.log("Hooray, it worked!");
             }).fail(function (response) {
                 console.error('Проблемы в PHP');
-                $form.find('.server-error').show().find('.message-body').text('На сервере произошла ошибка');
+                $form
+                    .find('.server-error').show()
+                    .find('.message-body').text('На сервере произошла ошибка');
             });
         };
 
     return {
         init: init
     };
-
 })();
 
 feedback.init();

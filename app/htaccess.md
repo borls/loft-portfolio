@@ -1,16 +1,12 @@
-# Указание кодировки по умолчанию
-AddDefaultCharset UTF-8
+#htaccess.net.ru
+AddDefaultCharset UTF-8 # Указание кодировки по умолчанию
 # Options [-|+]Indexes # Указание на открытие (закрытие) просмотра файлов директории
 #<FilesMatch "\.(gif|png|jpe?g)">
 #    Order Deny,Allow
 #    Deny from all
 #</FilesMatch>
-Options -Indexes
-# Исключение просмотра файлов определенного формата
-#IndexIgnore *.php* *.pl
+# IndexIgnore *.php* *.pl # Исключение просмотра файлов определенного формата
 # DirectoryIndex index.html index.php default.shtml my.xhtml # Указание интексного файла по умолчанию
-
-# Защита от хотлинков
 RewriteEngine on
 
 RewriteCond %(HTTP_HOST) ^www\.(.*) [NC]
@@ -18,10 +14,9 @@ RewriteRule ^(.*)$ http://%1/$1 [R=301,L]
 RewriteRule ^([0-9a-z-]+)$ /$1.php [L]
 
 # Переопределение своих страниц ошибок
-ErrorDocument 401 /401.php
-ErrorDocument 403 /403.php
-# файл не найден
-ErrorDocument 404 /404.php
+#ErrorDocument 401 /401.html
+#ErrorDocument 403 /403.html
+#ErrorDocument 404 /404.html # файл не найден
 
 
 # Настройка сессии

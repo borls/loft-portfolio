@@ -1,11 +1,21 @@
 <?php
+    // открытие сессии
     session_start();
+    // добавить данные в сессию
+    $_SESSION['developer'] = 'Boris Yuzhakov';
+
     require_once 'backend/authorization.php';
 
     $user = $auth->getUser();
     $file = basename(__FILE__);
     $info = pathinfo($file);
     $page = basename($file,'.'.$info['extension']);
+
+    if(isset($_SESSION['message'])){
+        $message = $_SESSION['message'];
+        $message_class = $_SESSION['message_class'];
+        unset($_SESSION['message']);
+    }
 ?>
 <!DOCTYPE html>
 <!--нужен для того, чтобы на скрин-ридерах хорошо отоброжался русский текст-->
@@ -45,7 +55,7 @@
                         <div class="aboutbox-image">
                             <div class="image-box">
                                 <div class="image-wrap">
-                                    <img src="img/user/borls.png" alt="Южаков Борис" class="avatar">
+                                    <img src="images/user/borls.png" alt="Южаков Борис" class="avatar">
                                 </div>
                             </div>
 
