@@ -30,12 +30,3 @@ foreach ($pageCssList as $css) {
 ?>
 <!-- js -->
 <script src="js/vendor/modernizr.min.js"></script>
-<!--[if lt IE 9]>
-<script src="js/vendor/placeholders.min.js"></script>
-<script src="js/vendor/respond.js"></script>
-<![endif]-->
-
-<script src="bower/jquery/dist/jquery.js"></script>
-<!-- <script srd="bower/modernizr.js"></script> -->
-<script src="js/main.js"></script>
-<script src="js/plugins.js"></script>
