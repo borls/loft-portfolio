@@ -1,21 +1,23 @@
 <?php
-require_once 'composer/autoload.php';
-require_once 'composer/phpmailer/phpmailer/language/phpmailer.lang-ru.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/composer/autoload.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/composer/phpmailer/phpmailer/language/phpmailer.lang-ru.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/composer/phpmailer/phpmailer/class.phpmailer.php';
+require_once $_SERVER['DOCUMENT_ROOT'].'/composer/phpmailer/phpmailer/class.smtp.php';
+//require_once $_SERVER['DOCUMENT_ROOT'].'/backend/mailer/config.php';
 
-function captchaCheck($key, $captcha, $ip) {
-    $url_to_send = "https://www.google.com/recaptcha/api/siteverify?secret=".$key.'&response='.$captcha.'&ip='.$ip;
-    $data_request = file_get_contents($url_to_send);
-    $data = json_decode($data_request, true);
 
-    if(isset($data['success']) && $data['success'] == 1){
-        return true;
-    } else {
-        return false;
-    }
-}
 function check_captcha($key, $catpcha, $ip){
 
     $url_to_send = "https://www.google.com/recaptcha/api/siteverify?secret=".$key.'&response='.$catpcha.'&ip='.$ip;
+    $data_request = file_get_contents($url_to_send);
+    $data =  json_decode($data_request, true);
+
+    return isset($data['success']) && $data['success'] == 1;
+
+}
+function check_captcha2($key, $catpcha){
+
+    $url_to_send = "https://www.google.com/recaptcha/api/siteverify?secret=".$key.'&response='.$catpcha;
     $data_request = file_get_contents($url_to_send);
     $data =  json_decode($data_request, true);
 
@@ -71,11 +73,38 @@ function send_message_to_email($data, $file = null){
     return $mail->send();
 }
 
+function smtp_mail($data, $__smtp){
+    $mail = new PHPMailer();
+    $mail->isSMTP();
+    try {
+        $mail->Host       = $__smtp['host'];
+        $mail->SMTPDebug  = $__smtp['debug'];
+        $mail->SMTPAuth   = $__smtp['auth'];
+        $mail->Port       = $__smtp['port'];
+        $mail->Username   = $__smtp['username'];
+        $mail->Password   = $__smtp['password'];
+        $mail->AddReplyTo($__smtp['addreply'], $__smtp['username']);
+        $mail->AddAddress($data['email']);                //кому письмо
+        $mail->SetFrom($__smtp['addreply'], $__smtp['username']); //от кого (желательно указывать свой реальный e-mail на используемом SMTP сервере
+        $mail->AddReplyTo($__smtp['addreply'], $__smtp['username']);
+        $mail->Subject = htmlspecialchars('Message from codebor.ru');
+        $mail->MsgHTML($data['message']);
+        //if($attach)  $mail->AddAttachment($attach);
+        $mail->Send();
+        echo "<br><p>Message sent Ok!</p>\n";
+        return true;
+    } catch (phpmailerException $e) {
+        echo $e->errorMessage();
+    } catch (Exception $e) {
+        echo $e->getMessage();
+    }
+    return false;
+}
 function redirect($message, $class = "alert-info"){
 //    $_SESSION['message'] = $message;
 //    $_SESSION['message_class'] = $class;
 //    header("HTTP/1.1 307 Temporary Redirect");
-//    header("Location: index.php");
+//    header("Location: /index");
     exit;
 }
 

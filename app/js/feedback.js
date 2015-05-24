@@ -43,8 +43,8 @@ var feedback = (function () {
 
             return $.ajax({ // Возвращает Deferred Object
                 type: 'post',
-                url: '/backend/feedback.php',
-                //dataType: 'json',
+                url: 'backend/feedback.php',
+                dataType: 'json',
                 data: data
             }).done(function (response, textStatus, jqXHR){
                 // Log a message to the console

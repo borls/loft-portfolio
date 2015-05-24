@@ -1,6 +1,7 @@
 <?php
     session_start();
     require_once 'backend/authorization.php';
+//    require_once 'backend/feedback.php';
 
     $user = $auth->getUser();
     $file = basename(__FILE__);
